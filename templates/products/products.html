@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Our projects
+{% endblock title %}
+
+
+{% block content %}
+    {% for i in pro %}
+    <img src="{{ i.image.url }}" alt="Product Image" style="width: 100px; height: 100px;"></img>
+        <p style="background-color: chocolate;">{{i}}</p>
+        <p style="background-color: lightblue;">{{i.price}}</p>
+        <p style="background-color: lightgreen;">{{ i.description }}</p>
+
+    {% endfor %}
+{% endblock content %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    About Page
+{% endblock title %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock extra_css %}
+
+{% block content %}
+    <header>
+        <h1>About Us</h1>
+    </header>
+    <main>
+        <h2>Who We Are</h2>
+        <p>{{ content }}</p>
+        <p>Feel free to go back to the <a href="{% url 'home' %}">Home Page</a> or explore more!</p>
+    </main>
+{% endblock content %}

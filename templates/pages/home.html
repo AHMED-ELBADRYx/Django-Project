@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Home Page
+{% endblock title %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock extra_css %}
+
+{% block content %}
+    <header>
+        <h1>{{ content }}</h1>
+            {{ logs_names|safe }}
+        
+    </header>
+    <main>
+        <p>This is a simple and clean design for your Django project.</p>
+        <p>Navigate to the <a href="{% url 'about' %}">About Page</a> to learn more!</p>
+        <p>Navigate to the <a href="{% url 'contact' %}">Contact Page</a> to get in touch!</p>
+    </main>
+{% endblock content %}
